@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.Xwa.OptTransform", "JeremyAnsel.Xwa.OptTransform\JeremyAnsel.Xwa.OptTransform.csproj", "{4E12E521-A724-4FDE-ACE6-DD6270D0885C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E12E521-A724-4FDE-ACE6-DD6270D0885C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E12E521-A724-4FDE-ACE6-DD6270D0885C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E12E521-A724-4FDE-ACE6-DD6270D0885C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E12E521-A724-4FDE-ACE6-DD6270D0885C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EB54FAF5-29B7-4C3C-8328-0EA7C123E046}
+	EndGlobalSection
+EndGlobal
