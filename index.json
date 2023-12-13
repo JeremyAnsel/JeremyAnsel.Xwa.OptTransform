@@ -1,0 +1,27 @@
+{
+  "api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html": {
+    "href": "api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html",
+    "title": "Class OptTransformHelpers",
+    "keywords": "Class OptTransformHelpers Inheritance object OptTransformHelpers Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: JeremyAnsel.Xwa.OptTransform Assembly: JeremyAnsel.Xwa.OptTransform.dll Syntax public static class OptTransformHelpers Methods | Edit this page View Source GetBaseOptFilename(string) Declaration public static string GetBaseOptFilename(string filename) Parameters Type Name Description string filename Returns Type Description string | Edit this page View Source GetObjectProfiles(string) Declaration public static Dictionary<string, List<int>> GetObjectProfiles(string filename) Parameters Type Name Description string filename Returns Type Description Dictionary<string, List<int>> | Edit this page View Source GetSkins(string) Declaration public static List<string> GetSkins(string filename) Parameters Type Name Description string filename Returns Type Description List<string>"
+  },
+  "api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html": {
+    "href": "api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html",
+    "title": "Class OptTransformModel",
+    "keywords": "Class OptTransformModel Inheritance object OptTransformModel Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: JeremyAnsel.Xwa.OptTransform Assembly: JeremyAnsel.Xwa.OptTransform.dll Syntax public static class OptTransformModel Methods | Edit this page View Source GetTransformedOpt(OptFile, int, List<int>, List<string>, bool) Declaration public static OptFile GetTransformedOpt(OptFile optFile, int version, List<int> objectProfile, List<string> skins, bool flipPixels = true) Parameters Type Name Description OptFile optFile int version List<int> objectProfile List<string> skins bool flipPixels Returns Type Description OptFile"
+  },
+  "api/JeremyAnsel.Xwa.OptTransform.html": {
+    "href": "api/JeremyAnsel.Xwa.OptTransform.html",
+    "title": "Namespace JeremyAnsel.Xwa.OptTransform",
+    "keywords": "Namespace JeremyAnsel.Xwa.OptTransform Classes OptTransformHelpers OptTransformModel"
+  },
+  "api/index.html": {
+    "href": "api/index.html",
+    "title": "JeremyAnsel.Xwa.OptTransform",
+    "keywords": "JeremyAnsel.Xwa.OptTransform This is the documentation for JeremyAnsel.Xwa.OptTransform."
+  },
+  "index.html": {
+    "href": "index.html",
+    "title": "JeremyAnsel.Xwa.OptTransform",
+    "keywords": "JeremyAnsel.Xwa.OptTransform JeremyAnsel.Xwa.OptTransform is a .Net library to transform X-Wing Alliance's OPT files."
+  }
+}
