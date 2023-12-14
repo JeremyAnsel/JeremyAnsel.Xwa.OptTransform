@@ -5,7 +5,9 @@ VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "JeremyAnsel.Xwa.OptTransform", "JeremyAnsel.Xwa.OptTransform\JeremyAnsel.Xwa.OptTransform.csproj", "{4E12E521-A724-4FDE-ACE6-DD6270D0885C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Documentation", "Documentation\Documentation.csproj", "{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documentation", "Documentation\Documentation.csproj", "{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JeremyAnsel.Xwa.OptTransform.Wpf", "JeremyAnsel.Xwa.OptTransform.Wpf\JeremyAnsel.Xwa.OptTransform.Wpf.csproj", "{0E21CDC6-F183-4659-9DCF-D493F133A31C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,6 +22,10 @@ Global
 		{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D505CC0-B1BB-4E8C-93B1-BA226C66A368}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E21CDC6-F183-4659-9DCF-D493F133A31C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E21CDC6-F183-4659-9DCF-D493F133A31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E21CDC6-F183-4659-9DCF-D493F133A31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E21CDC6-F183-4659-9DCF-D493F133A31C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

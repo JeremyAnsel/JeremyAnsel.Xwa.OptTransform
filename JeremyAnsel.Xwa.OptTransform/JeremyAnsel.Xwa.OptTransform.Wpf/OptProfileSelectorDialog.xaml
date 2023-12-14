@@ -1,0 +1,84 @@
+﻿<Window x:Class="JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:JeremyAnsel.Xwa.OptTransform.Wpf"
+        mc:Ignorable="d"
+        Title="Opt Profile Selector Dialog"
+        Height="450"
+        Width="500"
+        UseLayoutRounding="True"
+        WindowStyle="ToolWindow"
+        Topmost="False"
+        ShowInTaskbar="True">
+    <DockPanel>
+        <Button x:Name="selectButton"
+                DockPanel.Dock="Bottom"
+                Width="150"
+                Height="30"
+                Margin="10"
+                Content="Select"
+                Click="SelectButton_Click" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <DockPanel Grid.Column="0">
+                <TextBlock DockPanel.Dock="Top"
+                           Text="Opt Versions: " />
+                <ListBox ItemsSource="{Binding OptVersions}"
+                         SelectedIndex="{Binding SelectedVersion}" />
+            </DockPanel>
+            <DockPanel Grid.Column="1">
+                <TextBlock DockPanel.Dock="Top"
+                           Text="Object Profiles: " />
+                <ListBox ItemsSource="{Binding OptObjectProfiles}"
+                         SelectedItem="{Binding SelectedObjectProfile}" />
+            </DockPanel>
+            <DockPanel Grid.Column="2">
+                <TextBlock DockPanel.Dock="Top"
+                           Text="Skins: " />
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+                    <DockPanel Grid.Row="0">
+                        <ToolBarTray DockPanel.Dock="Bottom"
+                                     IsLocked="True">
+                            <ToolBar>
+                                <Button x:Name="clearSelectedSkinsButton"
+                                        Content="Clear"
+                                        Click="ClearSelectedSkinsButton_Click" />
+                                <Button x:Name="addSelectedSkinsButton"
+                                        Content="Add"
+                                        Click="AddSelectedSkinsButton_Click" />
+                            </ToolBar>
+                        </ToolBarTray>
+                        <ListBox x:Name="optSkinsListBox"
+                                 ItemsSource="{Binding OptSkins}"
+                                 MouseDoubleClick="OptSkinsListBox_MouseDoubleClick" />
+                    </DockPanel>
+                    <DataGrid Grid.Row="1"
+                              ItemsSource="{Binding SelectedSkins}"
+                              AutoGenerateColumns="False"
+                              SelectionMode="Single"
+                              CanUserAddRows="False"
+                              CanUserDeleteRows="False"
+                              CanUserSortColumns="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Name"
+                                                Binding="{Binding Name}"
+                                                IsReadOnly="True" />
+                            <DataGridTextColumn Header="Opacity"
+                                                Binding="{Binding Opacity}" />
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </DockPanel>
+        </Grid>
+    </DockPanel>
+</Window>
