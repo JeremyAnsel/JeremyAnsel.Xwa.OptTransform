@@ -4,7 +4,8 @@
       "src": [
         {
           "files": [
-            "JeremyAnsel.Xwa.OptTransform/**.csproj"
+            "JeremyAnsel.Xwa.OptTransform/**.csproj",
+            "JeremyAnsel.Xwa.OptTransform.Wpf/**.csproj"
           ],
           "src": "../"
         }
