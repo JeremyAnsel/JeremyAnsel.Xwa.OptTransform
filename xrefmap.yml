@@ -76,6 +76,15 @@ references:
   fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile, Integer, System.Collections.Generic.List(Of Integer), System.Collections.Generic.List(Of String), Boolean)
   nameWithType: OptTransformModel.GetTransformedOpt(OptFile, int, List<int>, List<string>, bool)
   nameWithType.vb: OptTransformModel.GetTransformedOpt(OptFile, Integer, List(Of Integer), List(Of String), Boolean)
+- uid: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile,System.Int32,System.String,System.Collections.Generic.List{System.String},System.Boolean)
+  name: GetTransformedOpt(OptFile, int, string, List<string>, bool)
+  href: api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html#JeremyAnsel_Xwa_OptTransform_OptTransformModel_GetTransformedOpt_JeremyAnsel_Xwa_Opt_OptFile_System_Int32_System_String_System_Collections_Generic_List_System_String__System_Boolean_
+  commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile,System.Int32,System.String,System.Collections.Generic.List{System.String},System.Boolean)
+  name.vb: GetTransformedOpt(OptFile, Integer, String, List(Of String), Boolean)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile, int, string, System.Collections.Generic.List<string>, bool)
+  fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile, Integer, String, System.Collections.Generic.List(Of String), Boolean)
+  nameWithType: OptTransformModel.GetTransformedOpt(OptFile, int, string, List<string>, bool)
+  nameWithType.vb: OptTransformModel.GetTransformedOpt(OptFile, Integer, String, List(Of String), Boolean)
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt*
   name: GetTransformedOpt
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html#JeremyAnsel_Xwa_OptTransform_OptTransformModel_GetTransformedOpt_
