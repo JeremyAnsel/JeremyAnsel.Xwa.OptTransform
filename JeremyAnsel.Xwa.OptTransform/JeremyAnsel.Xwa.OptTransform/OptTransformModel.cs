@@ -7,6 +7,24 @@ namespace JeremyAnsel.Xwa.OptTransform
 {
     public static class OptTransformModel
     {
+        public static OptFile GetTransformedOpt(OptFile optFile, int version, string objectProfileName, List<string> skins, bool flipPixels = true)
+        {
+            if (optFile == null || string.IsNullOrEmpty(optFile.FileName))
+            {
+                return new OptFile();
+            }
+
+            var objectProfiles = OptTransformHelpers.GetObjectProfiles(optFile.FileName);
+
+            if (!objectProfiles.TryGetValue(objectProfileName, out List<int> objectProfile))
+            {
+                objectProfile = objectProfiles["Default"];
+            }
+
+            var opt = GetTransformedOpt(optFile, version, objectProfile, skins, flipPixels);
+            return opt;
+        }
+
         public static OptFile GetTransformedOpt(OptFile optFile, int version, List<int> objectProfile, List<string> skins, bool flipPixels = true)
         {
             if (optFile == null || string.IsNullOrEmpty(optFile.FileName))
