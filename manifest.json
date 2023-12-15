@@ -32,6 +32,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.yml",
       "output": {
         ".html": {
