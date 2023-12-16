@@ -29,6 +29,23 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
 
         private void SelectedSkins_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
+            foreach (INotifyPropertyChanged added in e.NewItems)
+            {
+                added.PropertyChanged += SelectedSkins_PropertyChanged;
+            }
+
+            foreach (INotifyPropertyChanged removed in e.OldItems)
+            {
+                removed.PropertyChanged -= SelectedSkins_PropertyChanged;
+            }
+
+            this.RaisePropertyChangedEvent(nameof(SelectedSkins));
+            this.RaisePropertyChangedEvent(nameof(SelectedSkinsKeys));
+        }
+
+        private void SelectedSkins_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        {
+            this.RaisePropertyChangedEvent(nameof(SelectedSkins));
             this.RaisePropertyChangedEvent(nameof(SelectedSkinsKeys));
         }
 
