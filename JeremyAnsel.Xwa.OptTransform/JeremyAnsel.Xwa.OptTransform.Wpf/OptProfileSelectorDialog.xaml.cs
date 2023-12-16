@@ -40,14 +40,20 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
 
         private void SelectedSkins_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
         {
-            foreach (INotifyPropertyChanged added in e.NewItems)
+            if (e.NewItems is not null)
             {
-                added.PropertyChanged += SelectedSkins_PropertyChanged;
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SelectedSkins_PropertyChanged;
+                }
             }
 
-            foreach (INotifyPropertyChanged removed in e.OldItems)
+            if (e.OldItems is not null)
             {
-                removed.PropertyChanged -= SelectedSkins_PropertyChanged;
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SelectedSkins_PropertyChanged;
+                }
             }
 
             this.RaisePropertyChangedEvent(nameof(SelectedSkins));
