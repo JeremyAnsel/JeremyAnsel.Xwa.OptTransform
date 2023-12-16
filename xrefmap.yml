@@ -191,6 +191,28 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.OptVersions
   nameWithType: OptProfileSelectorControl.OptVersions
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.PropertyChanged
+  name: PropertyChanged
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorControl_PropertyChanged
+  commentId: E:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.PropertyChanged
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.PropertyChanged
+  nameWithType: OptProfileSelectorControl.PropertyChanged
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.RaisePropertyChangedEvent(System.String)
+  name: RaisePropertyChangedEvent(string)
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorControl_RaisePropertyChangedEvent_System_String_
+  commentId: M:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.RaisePropertyChangedEvent(System.String)
+  name.vb: RaisePropertyChangedEvent(String)
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.RaisePropertyChangedEvent(string)
+  fullName.vb: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.RaisePropertyChangedEvent(String)
+  nameWithType: OptProfileSelectorControl.RaisePropertyChangedEvent(string)
+  nameWithType.vb: OptProfileSelectorControl.RaisePropertyChangedEvent(String)
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.RaisePropertyChangedEvent*
+  name: RaisePropertyChangedEvent
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorControl_RaisePropertyChangedEvent_
+  commentId: Overload:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.RaisePropertyChangedEvent
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.RaisePropertyChangedEvent
+  nameWithType: OptProfileSelectorControl.RaisePropertyChangedEvent
 - uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.SelectedObjectProfile
   name: SelectedObjectProfile
   href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorControl_SelectedObjectProfile
@@ -333,6 +355,28 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.OptVersions
   nameWithType: OptProfileSelectorDialog.OptVersions
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.PropertyChanged
+  name: PropertyChanged
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorDialog_PropertyChanged
+  commentId: E:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.PropertyChanged
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.PropertyChanged
+  nameWithType: OptProfileSelectorDialog.PropertyChanged
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.RaisePropertyChangedEvent(System.String)
+  name: RaisePropertyChangedEvent(string)
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorDialog_RaisePropertyChangedEvent_System_String_
+  commentId: M:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.RaisePropertyChangedEvent(System.String)
+  name.vb: RaisePropertyChangedEvent(String)
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.RaisePropertyChangedEvent(string)
+  fullName.vb: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.RaisePropertyChangedEvent(String)
+  nameWithType: OptProfileSelectorDialog.RaisePropertyChangedEvent(string)
+  nameWithType.vb: OptProfileSelectorDialog.RaisePropertyChangedEvent(String)
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.RaisePropertyChangedEvent*
+  name: RaisePropertyChangedEvent
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorDialog_RaisePropertyChangedEvent_
+  commentId: Overload:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.RaisePropertyChangedEvent
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.RaisePropertyChangedEvent
+  nameWithType: OptProfileSelectorDialog.RaisePropertyChangedEvent
 - uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.SelectedObjectProfile
   name: SelectedObjectProfile
   href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorDialog_SelectedObjectProfile
