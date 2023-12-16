@@ -1,5 +1,7 @@
 ﻿using JeremyAnsel.Xwa.Opt;
 using System.Collections.ObjectModel;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Input;
 
@@ -8,11 +10,20 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
     /// <summary>
     /// Logique d'interaction pour OptProfileSelectorDialog.xaml
     /// </summary>
-    public partial class OptProfileSelectorDialog : Window
+    public partial class OptProfileSelectorDialog : Window, INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void RaisePropertyChangedEvent(string propertyName)
+        {
+            this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
         public OptProfileSelectorDialog(string optFileName, bool topmost = false)
         {
             InitializeComponent();
+
+            this.SelectedSkins.CollectionChanged += SelectedSkins_CollectionChanged;
 
             Topmost = topmost;
 
@@ -27,17 +38,136 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             this.DataContext = this;
         }
 
-        public string OptFileName { get; }
+        private void SelectedSkins_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        {
+            this.RaisePropertyChangedEvent(nameof(SelectedSkinsKeys));
+        }
 
-        public List<int> OptVersions { get; }
+        private string optFileName;
 
-        public List<string> OptObjectProfiles { get; }
+        public string OptFileName
+        {
+            get
+            {
+                return this.optFileName;
+            }
 
-        public List<string> OptSkins { get; }
+            private set
+            {
+                if (value == this.optFileName)
+                {
+                    return;
+                }
 
-        public int SelectedVersion { get; set; } = 0;
+                this.optFileName = value;
+                this.RaisePropertyChangedEvent(nameof(OptFileName));
+            }
+        }
 
-        public string SelectedObjectProfile { get; set; } = "Default";
+        private List<int> optVersions;
+
+        public List<int> OptVersions
+        {
+            get
+            {
+                return this.optVersions;
+            }
+
+            private set
+            {
+                if (value == this.optVersions)
+                {
+                    return;
+                }
+
+                this.optVersions = value;
+                this.RaisePropertyChangedEvent(nameof(OptVersions));
+            }
+        }
+
+        private List<string> optObjectProfiles;
+
+        public List<string> OptObjectProfiles
+        {
+            get
+            {
+                return this.optObjectProfiles;
+            }
+
+            private set
+            {
+                if (value == this.optObjectProfiles)
+                {
+                    return;
+                }
+
+                this.optObjectProfiles = value;
+                this.RaisePropertyChangedEvent(nameof(OptObjectProfiles));
+            }
+        }
+
+        private List<string> optSkins;
+
+        public List<string> OptSkins
+        {
+            get
+            {
+                return this.optSkins;
+            }
+
+            private set
+            {
+                if (value == this.optSkins)
+                {
+                    return;
+                }
+
+                this.optSkins = value;
+                this.RaisePropertyChangedEvent(nameof(OptSkins));
+            }
+        }
+
+        private int selectedVersion = 0;
+
+        public int SelectedVersion
+        {
+            get
+            {
+                return this.selectedVersion;
+            }
+
+            set
+            {
+                if (value == this.selectedVersion)
+                {
+                    return;
+                }
+
+                this.selectedVersion = value;
+                this.RaisePropertyChangedEvent(nameof(SelectedVersion));
+            }
+        }
+
+        private string selectedObjectProfile = "Default";
+
+        public string SelectedObjectProfile
+        {
+            get
+            {
+                return this.selectedObjectProfile;
+            }
+
+            set
+            {
+                if (value == this.selectedObjectProfile)
+                {
+                    return;
+                }
+
+                this.selectedObjectProfile = value;
+                this.RaisePropertyChangedEvent(nameof(SelectedObjectProfile));
+            }
+        }
 
         public ObservableCollection<OptSkinItem> SelectedSkins { get; } = new();
 
