@@ -223,6 +223,10 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             this.OptObjectProfiles = null;
             this.OptSkins = null;
 
+            this.SelectedVersion = 0;
+            this.SelectedObjectProfile = "Default";
+            this.SelectedSkins.Clear();
+
             OptFile optFile = OptFile.FromFile(filename, false);
 
             List<int> optVersions = Enumerable.Range(0, optFile.MaxTextureVersion).ToList();
