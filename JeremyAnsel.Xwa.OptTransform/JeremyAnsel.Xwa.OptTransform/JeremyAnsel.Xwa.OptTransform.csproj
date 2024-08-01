@@ -28,8 +28,8 @@
 
   <ItemGroup>
     <PackageReference Include="JeremyAnsel.IO.Locator" Version="3.0.38" />
-    <PackageReference Include="JeremyAnsel.Xwa.HooksConfig" Version="1.0.4" />
-    <PackageReference Include="JeremyAnsel.Xwa.Opt" Version="3.0.47" />
+    <PackageReference Include="JeremyAnsel.Xwa.HooksConfig" Version="1.0.6" />
+    <PackageReference Include="JeremyAnsel.Xwa.Opt" Version="3.0.48" />
     <PackageReference Condition="'$(CI)' == 'True'" Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
