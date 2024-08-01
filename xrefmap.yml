@@ -123,6 +123,19 @@ references:
   fullName.vb: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.New
   nameWithType: OptProfileSelectorControl.OptProfileSelectorControl
   nameWithType.vb: OptProfileSelectorControl.New
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.InitializeComponent
+  name: InitializeComponent()
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorControl_InitializeComponent
+  commentId: M:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.InitializeComponent
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.InitializeComponent()
+  nameWithType: OptProfileSelectorControl.InitializeComponent()
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.InitializeComponent*
+  name: InitializeComponent
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorControl_InitializeComponent_
+  commentId: Overload:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.InitializeComponent
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.InitializeComponent
+  nameWithType: OptProfileSelectorControl.InitializeComponent
 - uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.LoadOpt(System.String)
   name: LoadOpt(string)
   href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorControl_LoadOpt_System_String_
@@ -303,6 +316,19 @@ references:
   fullName.vb: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.New
   nameWithType: OptProfileSelectorDialog.OptProfileSelectorDialog
   nameWithType.vb: OptProfileSelectorDialog.New
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.InitializeComponent
+  name: InitializeComponent()
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorDialog_InitializeComponent
+  commentId: M:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.InitializeComponent
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.InitializeComponent()
+  nameWithType: OptProfileSelectorDialog.InitializeComponent()
+- uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.InitializeComponent*
+  name: InitializeComponent
+  href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorDialog_InitializeComponent_
+  commentId: Overload:JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.InitializeComponent
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.InitializeComponent
+  nameWithType: OptProfileSelectorDialog.InitializeComponent
 - uid: JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.OptFileName
   name: OptFileName
   href: api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html#JeremyAnsel_Xwa_OptTransform_Wpf_OptProfileSelectorDialog_OptFileName
