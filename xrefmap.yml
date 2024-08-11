@@ -14,13 +14,13 @@ references:
   fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers
   nameWithType: OptTransformHelpers
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename(System.String)
-  name: GetBaseOptFilename(string)
+  name: GetBaseOptFilename(string?)
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html#JeremyAnsel_Xwa_OptTransform_OptTransformHelpers_GetBaseOptFilename_System_String_
   commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename(System.String)
   name.vb: GetBaseOptFilename(String)
-  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename(string)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename(string?)
   fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename(String)
-  nameWithType: OptTransformHelpers.GetBaseOptFilename(string)
+  nameWithType: OptTransformHelpers.GetBaseOptFilename(string?)
   nameWithType.vb: OptTransformHelpers.GetBaseOptFilename(String)
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename*
   name: GetBaseOptFilename
@@ -30,13 +30,13 @@ references:
   fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename
   nameWithType: OptTransformHelpers.GetBaseOptFilename
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(System.String)
-  name: GetObjectProfiles(string)
+  name: GetObjectProfiles(string?)
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html#JeremyAnsel_Xwa_OptTransform_OptTransformHelpers_GetObjectProfiles_System_String_
   commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(System.String)
   name.vb: GetObjectProfiles(String)
-  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(string)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(string?)
   fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(String)
-  nameWithType: OptTransformHelpers.GetObjectProfiles(string)
+  nameWithType: OptTransformHelpers.GetObjectProfiles(string?)
   nameWithType.vb: OptTransformHelpers.GetObjectProfiles(String)
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles*
   name: GetObjectProfiles
@@ -46,13 +46,13 @@ references:
   fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles
   nameWithType: OptTransformHelpers.GetObjectProfiles
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetSkins(System.String)
-  name: GetSkins(string)
+  name: GetSkins(string?)
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html#JeremyAnsel_Xwa_OptTransform_OptTransformHelpers_GetSkins_System_String_
   commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetSkins(System.String)
   name.vb: GetSkins(String)
-  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetSkins(string)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetSkins(string?)
   fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetSkins(String)
-  nameWithType: OptTransformHelpers.GetSkins(string)
+  nameWithType: OptTransformHelpers.GetSkins(string?)
   nameWithType.vb: OptTransformHelpers.GetSkins(String)
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetSkins*
   name: GetSkins
@@ -68,22 +68,22 @@ references:
   fullName: JeremyAnsel.Xwa.OptTransform.OptTransformModel
   nameWithType: OptTransformModel
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile,System.Int32,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.String},System.Boolean)
-  name: GetTransformedOpt(OptFile, int, List<int>, List<string>, bool)
+  name: GetTransformedOpt(OptFile?, int, List<int>, List<string>, bool)
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html#JeremyAnsel_Xwa_OptTransform_OptTransformModel_GetTransformedOpt_JeremyAnsel_Xwa_Opt_OptFile_System_Int32_System_Collections_Generic_List_System_Int32__System_Collections_Generic_List_System_String__System_Boolean_
   commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile,System.Int32,System.Collections.Generic.List{System.Int32},System.Collections.Generic.List{System.String},System.Boolean)
   name.vb: GetTransformedOpt(OptFile, Integer, List(Of Integer), List(Of String), Boolean)
-  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile, int, System.Collections.Generic.List<int>, System.Collections.Generic.List<string>, bool)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile?, int, System.Collections.Generic.List<int>, System.Collections.Generic.List<string>, bool)
   fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile, Integer, System.Collections.Generic.List(Of Integer), System.Collections.Generic.List(Of String), Boolean)
-  nameWithType: OptTransformModel.GetTransformedOpt(OptFile, int, List<int>, List<string>, bool)
+  nameWithType: OptTransformModel.GetTransformedOpt(OptFile?, int, List<int>, List<string>, bool)
   nameWithType.vb: OptTransformModel.GetTransformedOpt(OptFile, Integer, List(Of Integer), List(Of String), Boolean)
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile,System.Int32,System.String,System.Collections.Generic.List{System.String},System.Boolean)
-  name: GetTransformedOpt(OptFile, int, string, List<string>, bool)
+  name: GetTransformedOpt(OptFile?, int, string, List<string>, bool)
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html#JeremyAnsel_Xwa_OptTransform_OptTransformModel_GetTransformedOpt_JeremyAnsel_Xwa_Opt_OptFile_System_Int32_System_String_System_Collections_Generic_List_System_String__System_Boolean_
   commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile,System.Int32,System.String,System.Collections.Generic.List{System.String},System.Boolean)
   name.vb: GetTransformedOpt(OptFile, Integer, String, List(Of String), Boolean)
-  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile, int, string, System.Collections.Generic.List<string>, bool)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile?, int, string, System.Collections.Generic.List<string>, bool)
   fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt(JeremyAnsel.Xwa.Opt.OptFile, Integer, String, System.Collections.Generic.List(Of String), Boolean)
-  nameWithType: OptTransformModel.GetTransformedOpt(OptFile, int, string, List<string>, bool)
+  nameWithType: OptTransformModel.GetTransformedOpt(OptFile?, int, string, List<string>, bool)
   nameWithType.vb: OptTransformModel.GetTransformedOpt(OptFile, Integer, String, List(Of String), Boolean)
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformModel.GetTransformedOpt*
   name: GetTransformedOpt
