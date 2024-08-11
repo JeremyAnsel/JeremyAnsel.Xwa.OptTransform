@@ -4,23 +4,28 @@ namespace JeremyAnsel.Xwa.OptTransform
 {
     public static class OptTransformHelpers
     {
-        public static string GetBaseOptFilename(string filename)
+        public static string GetBaseOptFilename(string? filename)
         {
+            if (string.IsNullOrEmpty(filename))
+            {
+                return string.Empty;
+            }
+
             string baseFilename = Path.ChangeExtension(filename, null);
 
             if (baseFilename.EndsWith("exterior", StringComparison.OrdinalIgnoreCase))
             {
-                baseFilename = baseFilename.Substring(0, baseFilename.Length - "exterior".Length);
+                baseFilename = baseFilename[..^"exterior".Length];
             }
             else if (baseFilename.EndsWith("cockpit", StringComparison.OrdinalIgnoreCase))
             {
-                baseFilename = baseFilename.Substring(0, baseFilename.Length - "cockpit".Length);
+                baseFilename = baseFilename[..^"cockpit".Length];
             }
 
             return baseFilename;
         }
 
-        public static Dictionary<string, List<int>> GetObjectProfiles(string filename)
+        public static Dictionary<string, List<int>> GetObjectProfiles(string? filename)
         {
             var profiles = new Dictionary<string, List<int>>
             {
@@ -50,14 +55,14 @@ namespace JeremyAnsel.Xwa.OptTransform
                     continue;
                 }
 
-                string name = line.Substring(0, pos).Trim();
+                string name = line[..pos].Trim();
 
                 if (name.Length == 0)
                 {
                     continue;
                 }
 
-                var values = XwaHooksConfig.Tokennize(line.Substring(pos + 1).Trim());
+                var values = XwaHooksConfig.Tokennize(line[(pos + 1)..].Trim());
                 var indices = new List<int>();
 
                 foreach (string value in values)
@@ -72,7 +77,7 @@ namespace JeremyAnsel.Xwa.OptTransform
             return profiles;
         }
 
-        public static List<string> GetSkins(string filename)
+        public static List<string> GetSkins(string? filename)
         {
             var skins = new List<string>();
 
@@ -82,7 +87,7 @@ namespace JeremyAnsel.Xwa.OptTransform
             }
 
             string optName = Path.GetFileNameWithoutExtension(filename);
-            string directory = Path.Combine(Path.GetDirectoryName(filename), "Skins", optName);
+            string directory = Path.Combine(Path.GetDirectoryName(filename)!, "Skins", optName);
 
             if (Directory.Exists(directory))
             {

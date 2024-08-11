@@ -12,7 +12,7 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
     /// </summary>
     public partial class OptProfileSelectorDialog : Window, INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public void RaisePropertyChangedEvent(string propertyName)
         {
@@ -38,7 +38,7 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             this.DataContext = this;
         }
 
-        private void SelectedSkins_CollectionChanged(object sender, NotifyCollectionChangedEventArgs e)
+        private void SelectedSkins_CollectionChanged(object? sender, NotifyCollectionChangedEventArgs e)
         {
             if (e.NewItems is not null)
             {
@@ -60,15 +60,15 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             this.RaisePropertyChangedEvent(nameof(SelectedSkinsKeys));
         }
 
-        private void SelectedSkins_PropertyChanged(object sender, PropertyChangedEventArgs e)
+        private void SelectedSkins_PropertyChanged(object? sender, PropertyChangedEventArgs e)
         {
             this.RaisePropertyChangedEvent(nameof(SelectedSkins));
             this.RaisePropertyChangedEvent(nameof(SelectedSkinsKeys));
         }
 
-        private string optFileName;
+        private string? optFileName;
 
-        public string OptFileName
+        public string? OptFileName
         {
             get
             {
@@ -87,9 +87,9 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             }
         }
 
-        private List<int> optVersions;
+        private List<int>? optVersions;
 
-        public List<int> OptVersions
+        public List<int>? OptVersions
         {
             get
             {
@@ -108,9 +108,9 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             }
         }
 
-        private List<string> optObjectProfiles;
+        private List<string>? optObjectProfiles;
 
-        public List<string> OptObjectProfiles
+        public List<string>? OptObjectProfiles
         {
             get
             {
@@ -129,9 +129,9 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             }
         }
 
-        private List<string> optSkins;
+        private List<string>? optSkins;
 
-        public List<string> OptSkins
+        public List<string>? OptSkins
         {
             get
             {
@@ -204,23 +204,23 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             }
         }
 
-        private void SelectButton_Click(object sender, RoutedEventArgs e)
+        private void SelectButton_Click(object? sender, RoutedEventArgs e)
         {
 
             this.DialogResult = true;
         }
 
-        private void ClearSelectedSkinsButton_Click(object sender, RoutedEventArgs e)
+        private void ClearSelectedSkinsButton_Click(object? sender, RoutedEventArgs e)
         {
             this.SelectedSkins.Clear();
         }
 
-        private void AddSelectedSkinsButton_Click(object sender, RoutedEventArgs e)
+        private void AddSelectedSkinsButton_Click(object? sender, RoutedEventArgs e)
         {
             this.AddSelectedSkin();
         }
 
-        private void OptSkinsListBox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        private void OptSkinsListBox_MouseDoubleClick(object? sender, MouseButtonEventArgs e)
         {
             this.AddSelectedSkin();
         }

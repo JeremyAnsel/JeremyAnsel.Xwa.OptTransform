@@ -6,7 +6,7 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
 {
     public sealed class OptSkinItem : INotifyPropertyChanged
     {
-        public event PropertyChangedEventHandler PropertyChanged;
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public OptSkinItem()
         {
@@ -25,7 +25,7 @@ namespace JeremyAnsel.Xwa.OptTransform.Wpf
             this.opacity = opacity;
         }
 
-        private string name;
+        private string name = string.Empty;
 
         public string Name
         {

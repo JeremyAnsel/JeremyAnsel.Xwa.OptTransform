@@ -7,7 +7,7 @@ namespace JeremyAnsel.Xwa.OptTransform
 {
     public static class OptTransformModel
     {
-        public static OptFile GetTransformedOpt(OptFile optFile, int version, string objectProfileName, List<string> skins, bool flipPixels = true)
+        public static OptFile GetTransformedOpt(OptFile? optFile, int version, string objectProfileName, List<string> skins, bool flipPixels = true)
         {
             if (optFile == null || string.IsNullOrEmpty(optFile.FileName))
             {
@@ -16,7 +16,7 @@ namespace JeremyAnsel.Xwa.OptTransform
 
             var objectProfiles = OptTransformHelpers.GetObjectProfiles(optFile.FileName);
 
-            if (!objectProfiles.TryGetValue(objectProfileName, out List<int> objectProfile))
+            if (!objectProfiles.TryGetValue(objectProfileName, out List<int>? objectProfile))
             {
                 objectProfile = objectProfiles["Default"];
             }
@@ -25,7 +25,7 @@ namespace JeremyAnsel.Xwa.OptTransform
             return opt;
         }
 
-        public static OptFile GetTransformedOpt(OptFile optFile, int version, List<int> objectProfile, List<string> skins, bool flipPixels = true)
+        public static OptFile GetTransformedOpt(OptFile? optFile, int version, List<int> objectProfile, List<string> skins, bool flipPixels = true)
         {
             if (optFile == null || string.IsNullOrEmpty(optFile.FileName))
             {
@@ -59,7 +59,7 @@ namespace JeremyAnsel.Xwa.OptTransform
 
             foreach (var facegroup in facegroups)
             {
-                if (facegroup.Textures.Count <= 1)
+                if (facegroup.Textures!.Count <= 1)
                 {
                     continue;
                 }
@@ -93,7 +93,7 @@ namespace JeremyAnsel.Xwa.OptTransform
             }
         }
 
-        private static string GetSkinDirectoryLocatorPath(string directory, string optName, string skinName)
+        private static string? GetSkinDirectoryLocatorPath(string directory, string optName, string skinName)
         {
             string[] skinNameParts = skinName.Split('-');
             skinName = skinNameParts[0];
@@ -122,8 +122,8 @@ namespace JeremyAnsel.Xwa.OptTransform
 
         private static void ApplySkins(OptFile opt, int version, List<string> skins, bool flipPixels)
         {
-            string optName = Path.GetFileNameWithoutExtension(opt.FileName);
-            string directory = Path.GetDirectoryName(opt.FileName);
+            string optName = Path.GetFileNameWithoutExtension(opt.FileName)!;
+            string directory = Path.GetDirectoryName(opt.FileName)!;
 
             string defaultSkinVersion = "Default_" + version.ToString(CultureInfo.InvariantCulture);
             bool hasDefaultSkinVersion = GetSkinDirectoryLocatorPath(directory, optName, defaultSkinVersion) != null;
@@ -174,11 +174,11 @@ namespace JeremyAnsel.Xwa.OptTransform
         private static SortedSet<string> GetTexturesExist(string optName, OptFile opt, List<string> distinctSkins)
         {
             var texturesExist = new SortedSet<string>();
-            string directory = Path.GetDirectoryName(opt.FileName);
+            string directory = Path.GetDirectoryName(opt.FileName)!;
 
             foreach (string skin in distinctSkins)
             {
-                string path = GetSkinDirectoryLocatorPath(directory, optName, skin);
+                string? path = GetSkinDirectoryLocatorPath(directory, optName, skin);
 
                 if (path == null)
                 {
@@ -242,7 +242,7 @@ namespace JeremyAnsel.Xwa.OptTransform
 
             foreach (var newTexture in newTextures)
             {
-                opt.Textures.Add(newTexture.Name, newTexture);
+                opt.Textures.Add(newTexture.Name!, newTexture);
             }
 
             foreach (var mesh in opt.Meshes)
@@ -251,7 +251,7 @@ namespace JeremyAnsel.Xwa.OptTransform
                 {
                     foreach (var faceGroup in lod.FaceGroups)
                     {
-                        if (faceGroup.Textures.Count == 0)
+                        if (faceGroup.Textures!.Count == 0)
                         {
                             continue;
                         }
@@ -276,16 +276,16 @@ namespace JeremyAnsel.Xwa.OptTransform
 
         private static void UpdateSkins(string optName, OptFile opt, List<string> distinctSkins, List<List<string>> fgSkins, bool flipPixels)
         {
-            var locatorsPath = new Dictionary<string, string>(distinctSkins.Count, StringComparer.OrdinalIgnoreCase);
+            var locatorsPath = new Dictionary<string, string?>(distinctSkins.Count, StringComparer.OrdinalIgnoreCase);
             var filesSets = new Dictionary<string, SortedSet<string>>(distinctSkins.Count, StringComparer.OrdinalIgnoreCase);
-            string directory = Path.GetDirectoryName(opt.FileName);
+            string directory = Path.GetDirectoryName(opt.FileName)!;
 
             foreach (string skin in distinctSkins)
             {
-                string path = GetSkinDirectoryLocatorPath(directory, optName, skin);
+                string? path = GetSkinDirectoryLocatorPath(directory, optName, skin);
                 locatorsPath.Add(skin, path);
 
-                SortedSet<string> filesSet = null;
+                SortedSet<string>? filesSet = null;
 
                 if (path != null)
                 {
@@ -312,19 +312,19 @@ namespace JeremyAnsel.Xwa.OptTransform
                     return;
                 }
 
-                string textureName = texture.Key.Substring(0, position);
+                string textureName = texture.Key[..position];
                 int fgIndex = int.Parse(texture.Key.Substring(position + 4, texture.Key.IndexOf('_', position + 4) - position - 4), CultureInfo.InvariantCulture);
 
                 foreach (string skin in fgSkins[fgIndex])
                 {
-                    string path = locatorsPath[skin];
+                    string? path = locatorsPath[skin];
 
                     if (path == null)
                     {
                         continue;
                     }
 
-                    string filename = TextureExists(filesSets[skin], textureName, skin);
+                    string? filename = TextureExists(filesSets[skin], textureName, skin);
 
                     if (filename == null)
                     {
@@ -373,12 +373,12 @@ namespace JeremyAnsel.Xwa.OptTransform
 
             if (!flipPixels)
             {
-                FlipPixels(newTexture.ImageData, newTexture.Width, newTexture.Height);
+                FlipPixels(newTexture.ImageData!, newTexture.Width, newTexture.Height);
             }
 
             int size = baseTexture.Width * baseTexture.Height;
-            byte[] src = newTexture.ImageData;
-            byte[] dst = baseTexture.ImageData;
+            byte[] src = newTexture.ImageData!;
+            byte[] dst = baseTexture.ImageData!;
 
             for (int i = 0; i < size; i++)
             {
@@ -412,7 +412,7 @@ namespace JeremyAnsel.Xwa.OptTransform
 
         private static readonly string[] _textureExtensions = new string[] { ".bmp", ".png", ".jpg" };
 
-        private static string TextureExists(SortedSet<string> files, string baseFilename, string skin)
+        private static string? TextureExists(SortedSet<string> files, string baseFilename, string skin)
         {
             string[] skinParts = skin.Split('-');
             skin = skinParts[0];
