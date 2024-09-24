@@ -42,6 +42,6 @@
   "index.html": {
     "href": "index.html",
     "title": "JeremyAnsel.Xwa.OptTransform",
-    "keywords": "JeremyAnsel.Xwa.OptTransform JeremyAnsel.Xwa.OptTransform is a .Net library to transform X-Wing Alliance's OPT files."
+    "keywords": "JeremyAnsel.Xwa.OptTransform JeremyAnsel.Xwa.OptTransform: JeremyAnsel.Xwa.OptTransform.Wpf: JeremyAnsel.Xwa.OptTransform is a .Net library to transform X-Wing Alliance's OPT files."
   }
 }
