@@ -1,7 +1,6 @@
-﻿using JeremyAnsel.IO.Locator;
-using JeremyAnsel.Xwa.Opt;
+﻿using JeremyAnsel.Xwa.Opt;
 using System.Globalization;
-using System.IO;
+using System.IO.Compression;
 
 namespace JeremyAnsel.Xwa.OptTransform
 {
@@ -112,11 +111,6 @@ namespace JeremyAnsel.Xwa.OptTransform
                 return path + ".zip";
             }
 
-            if (File.Exists(path + ".7z"))
-            {
-                return path + ".7z";
-            }
-
             return null;
         }
 
@@ -185,20 +179,21 @@ namespace JeremyAnsel.Xwa.OptTransform
                     continue;
                 }
 
-                SortedSet<string> filesSet;
+                string[] filenames;
 
-                using (IFileLocator locator = FileLocatorFactory.Create(path))
+                if (path.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
                 {
-                    if (locator == null)
-                    {
-                        continue;
-                    }
-
-                    var filesEnum = locator.EnumerateFiles()
-                        .Select(t => Path.GetFileName(t));
-
-                    filesSet = new SortedSet<string>(filesEnum, StringComparer.OrdinalIgnoreCase);
+                    using ZipArchive zip = ZipFile.OpenRead(path);
+                    ZipArchiveEntry[] files = [.. zip.Entries];
+                    filenames = Array.ConvertAll(files, t => t.Name);
                 }
+                else
+                {
+                    string[] files = Directory.GetFiles(path);
+                    filenames = Array.ConvertAll(files, t => Path.GetFileName(t));
+                }
+
+                SortedSet<string> filesSet = new(filenames, StringComparer.OrdinalIgnoreCase);
 
                 foreach (string textureName in opt.Textures.Keys)
                 {
@@ -289,18 +284,24 @@ namespace JeremyAnsel.Xwa.OptTransform
 
                 if (path != null)
                 {
-                    using IFileLocator locator = FileLocatorFactory.Create(path);
+                    string[] filenames;
 
-                    if (locator != null)
+                    if (path.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
                     {
-                        var filesEnum = locator.EnumerateFiles()
-                            .Select(t => Path.GetFileName(t));
-
-                        filesSet = new SortedSet<string>(filesEnum, StringComparer.OrdinalIgnoreCase);
+                        using ZipArchive zip = ZipFile.OpenRead(path);
+                        ZipArchiveEntry[] files = [.. zip.Entries];
+                        filenames = Array.ConvertAll(files, t => t.Name);
                     }
+                    else
+                    {
+                        string[] files = Directory.GetFiles(path);
+                        filenames = Array.ConvertAll(files, t => Path.GetFileName(t));
+                    }
+
+                    filesSet = new(filenames, StringComparer.OrdinalIgnoreCase);
                 }
 
-                filesSets.Add(skin, filesSet ?? new SortedSet<string>());
+                filesSets.Add(skin, filesSet ?? []);
             }
 
             opt.Textures.AsParallel().ForAll(texture =>
@@ -331,21 +332,35 @@ namespace JeremyAnsel.Xwa.OptTransform
                         continue;
                     }
 
-                    using IFileLocator locator = FileLocatorFactory.Create(path);
+                    Stream? file = null;
+                    ZipArchive? zip = null;
 
-                    if (locator == null)
+                    try
                     {
-                        continue;
-                    }
+                        if (path.EndsWith(".zip", StringComparison.OrdinalIgnoreCase))
+                        {
+                            zip = ZipFile.OpenRead(path);
+                            file = zip.GetEntry(filename)!.Open();
+                        }
+                        else
+                        {
+                            file = File.OpenRead(Path.Combine(path, filename));
+                        }
 
-                    CombineTextures(texture.Value, locator, filename, skin, flipPixels);
+                        CombineTextures(texture.Value, file!, filename, skin, flipPixels);
+                    }
+                    finally
+                    {
+                        file?.Dispose();
+                        zip?.Dispose();
+                    }
                 }
 
                 texture.Value.GenerateMipmaps();
             });
         }
 
-        private static void CombineTextures(Texture baseTexture, IFileLocator locator, string filename, string skin, bool flipPixels)
+        private static void CombineTextures(Texture baseTexture, Stream file, string filename, string skin, bool flipPixels)
         {
             string[] skinParts = skin.Split('-');
             //skin = skinParts[0];
@@ -358,11 +373,8 @@ namespace JeremyAnsel.Xwa.OptTransform
 
             Texture newTexture;
 
-            using (Stream file = locator.Open(filename))
-            {
-                newTexture = Texture.FromStream(file);
-                newTexture.Name = Path.GetFileNameWithoutExtension(filename);
-            }
+            newTexture = Texture.FromStream(file);
+            newTexture.Name = Path.GetFileNameWithoutExtension(filename);
 
             if (newTexture.Width != baseTexture.Width || newTexture.Height != baseTexture.Height)
             {
@@ -410,7 +422,7 @@ namespace JeremyAnsel.Xwa.OptTransform
             }
         }
 
-        private static readonly string[] _textureExtensions = new string[] { ".bmp", ".png", ".jpg" };
+        private static readonly string[] _textureExtensions = [".bmp", ".png", ".jpg"];
 
         private static string? TextureExists(SortedSet<string> files, string baseFilename, string skin)
         {
