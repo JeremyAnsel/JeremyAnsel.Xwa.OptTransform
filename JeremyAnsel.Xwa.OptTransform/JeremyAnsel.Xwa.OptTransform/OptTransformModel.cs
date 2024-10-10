@@ -1,4 +1,5 @@
 ﻿using JeremyAnsel.Xwa.Opt;
+using System.Collections.Concurrent;
 using System.Globalization;
 using System.IO.Compression;
 
@@ -216,13 +217,13 @@ namespace JeremyAnsel.Xwa.OptTransform
                 return;
             }
 
-            var newTextures = new List<Texture>();
+            var newTextures = new ConcurrentBag<Texture>();
 
-            foreach (var texture in opt.Textures)
+            opt.Textures.AsParallel().ForAll(texture =>
             {
                 if (!texturesExist.Contains(texture.Key))
                 {
-                    continue;
+                    return;
                 }
 
                 texture.Value.Convert8To32();
@@ -233,7 +234,7 @@ namespace JeremyAnsel.Xwa.OptTransform
                     newTexture.Name += "_fg_" + i.ToString(CultureInfo.InvariantCulture) + "_" + string.Join(",", fgSkins[i]);
                     newTextures.Add(newTexture);
                 }
-            }
+            });
 
             foreach (var newTexture in newTextures)
             {
