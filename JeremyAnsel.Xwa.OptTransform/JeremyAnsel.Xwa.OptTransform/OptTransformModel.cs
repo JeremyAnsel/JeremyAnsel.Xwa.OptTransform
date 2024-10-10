@@ -217,16 +217,16 @@ namespace JeremyAnsel.Xwa.OptTransform
                 return;
             }
 
-            var newTextures = new ConcurrentBag<Texture>();
+            var newTextures = new List<Texture>();
 
-            opt.Textures.AsParallel().ForAll(texture =>
+            foreach (var texture in opt.Textures)
             {
                 if (!texturesExist.Contains(texture.Key))
                 {
-                    return;
+                    continue;
                 }
 
-                texture.Value.Convert8To32();
+                //texture.Value.Convert8To32(false);
 
                 for (int i = 0; i < fgCount; i++)
                 {
@@ -234,52 +234,46 @@ namespace JeremyAnsel.Xwa.OptTransform
                     newTexture.Name += "_fg_" + i.ToString(CultureInfo.InvariantCulture) + "_" + string.Join(",", fgSkins[i]);
                     newTextures.Add(newTexture);
                 }
-            });
+            }
 
             foreach (var newTexture in newTextures)
             {
                 opt.Textures.Add(newTexture.Name!, newTexture);
             }
 
-            foreach (var mesh in opt.Meshes)
-            {
-                foreach (var lod in mesh.Lods)
+            opt.Meshes
+                .SelectMany(t => t.Lods)
+                .SelectMany(t => t.FaceGroups)
+                .Where(faceGroup => faceGroup.Textures!.Count != 0)
+                .AsParallel()
+                .ForAll(faceGroup =>
                 {
-                    foreach (var faceGroup in lod.FaceGroups)
+                    string name = faceGroup.Textures![0];
+
+                    if (!texturesExist.Contains(name))
                     {
-                        if (faceGroup.Textures!.Count == 0)
-                        {
-                            continue;
-                        }
-
-                        string name = faceGroup.Textures[0];
-
-                        if (!texturesExist.Contains(name))
-                        {
-                            continue;
-                        }
-
-                        faceGroup.Textures.Clear();
-
-                        for (int i = 0; i < fgCount; i++)
-                        {
-                            faceGroup.Textures.Add(name + "_fg_" + i.ToString(CultureInfo.InvariantCulture) + "_" + string.Join(",", fgSkins[i]));
-                        }
+                        return;
                     }
-                }
-            }
+
+                    faceGroup.Textures.Clear();
+
+                    for (int i = 0; i < fgCount; i++)
+                    {
+                        faceGroup.Textures.Add(name + "_fg_" + i.ToString(CultureInfo.InvariantCulture) + "_" + string.Join(",", fgSkins[i]));
+                    }
+                });
         }
 
         private static void UpdateSkins(string optName, OptFile opt, List<string> distinctSkins, List<List<string>> fgSkins, bool flipPixels)
         {
-            var locatorsPath = new Dictionary<string, string?>(distinctSkins.Count, StringComparer.OrdinalIgnoreCase);
-            var filesSets = new Dictionary<string, SortedSet<string>>(distinctSkins.Count, StringComparer.OrdinalIgnoreCase);
+            var locatorsPath = new ConcurrentDictionary<string, string?>(StringComparer.OrdinalIgnoreCase);
+            var filesSets = new ConcurrentDictionary<string, SortedSet<string>>(StringComparer.OrdinalIgnoreCase);
             string directory = Path.GetDirectoryName(opt.FileName)!;
 
-            foreach (string skin in distinctSkins)
+            distinctSkins.AsParallel().ForAll(skin =>
             {
                 string? path = GetSkinDirectoryLocatorPath(directory, optName, skin);
-                locatorsPath.Add(skin, path);
+                locatorsPath[skin] = path;
 
                 SortedSet<string>? filesSet = null;
 
@@ -302,8 +296,8 @@ namespace JeremyAnsel.Xwa.OptTransform
                     filesSet = new(filenames, StringComparer.OrdinalIgnoreCase);
                 }
 
-                filesSets.Add(skin, filesSet ?? []);
-            }
+                filesSets[skin] = filesSet ?? [];
+            });
 
             opt.Textures.AsParallel().ForAll(texture =>
             {
@@ -313,6 +307,8 @@ namespace JeremyAnsel.Xwa.OptTransform
                 {
                     return;
                 }
+
+                texture.Value.Convert8To32(false);
 
                 string textureName = texture.Key[..position];
                 int fgIndex = int.Parse(texture.Key.Substring(position + 4, texture.Key.IndexOf('_', position + 4) - position - 4), CultureInfo.InvariantCulture);
@@ -382,7 +378,7 @@ namespace JeremyAnsel.Xwa.OptTransform
                 return;
             }
 
-            newTexture.Convert8To32();
+            newTexture.Convert8To32(false);
 
             if (!flipPixels)
             {
