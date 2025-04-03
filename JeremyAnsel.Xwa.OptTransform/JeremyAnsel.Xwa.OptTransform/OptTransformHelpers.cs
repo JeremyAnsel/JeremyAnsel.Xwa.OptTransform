@@ -62,19 +62,34 @@ namespace JeremyAnsel.Xwa.OptTransform
                     continue;
                 }
 
-                var values = XwaHooksConfig.Tokennize(line[(pos + 1)..].Trim());
-                var indices = new List<int>();
-
-                foreach (string value in values)
-                {
-                    int index = XwaHooksConfig.ToInt32(value);
-                    indices.Add(index);
-                }
+                var indices = GetObjectProfiles(lines, name);
 
                 profiles[name] = indices;
             }
 
             return profiles;
+        }
+
+        public static List<int> GetObjectProfiles(IList<string> lines, string profileName)
+        {
+            var values = XwaHooksConfig.Tokennize(XwaHooksConfig.GetFileKeyValue(lines, profileName));
+            var indices = new List<int>();
+
+            foreach (string value in values)
+            {
+                if (XwaHooksConfig.IsInt32(value))
+                {
+                    int index = XwaHooksConfig.ToInt32(value);
+                    indices.Add(index);
+                }
+                else
+                {
+                    var refIndices = GetObjectProfiles(lines, value);
+                    indices.AddRange(refIndices);
+                }
+            }
+
+            return indices;
         }
 
         public static List<string> GetSkins(string? filename)

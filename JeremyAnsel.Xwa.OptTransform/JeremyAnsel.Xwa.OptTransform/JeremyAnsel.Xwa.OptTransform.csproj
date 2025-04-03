@@ -39,7 +39,7 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="JeremyAnsel.Xwa.HooksConfig" Version="1.0.9" />
+    <PackageReference Include="JeremyAnsel.Xwa.HooksConfig" Version="1.0.10" />
     <PackageReference Include="JeremyAnsel.Xwa.Opt" Version="3.0.51" />
     <PackageReference Condition="'$(CI)' == 'True'" Include="Microsoft.SourceLink.GitHub" Version="1.1.1">
       <PrivateAssets>all</PrivateAssets>
