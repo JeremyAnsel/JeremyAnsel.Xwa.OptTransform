@@ -18,7 +18,11 @@
           "relative_path": "api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform.OptTransformHelpers",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -28,7 +32,11 @@
           "relative_path": "api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform.OptTransformModel",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -38,7 +46,11 @@
           "relative_path": "api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl",
+      "Summary": "<p sourcefile=\"api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorControl.yml\" sourcestartlinenumber=\"1\">Logique d'interaction pour OptProfileSelectorControl.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -48,7 +60,11 @@
           "relative_path": "api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog",
+      "Summary": "<p sourcefile=\"api/JeremyAnsel.Xwa.OptTransform.Wpf.OptProfileSelectorDialog.yml\" sourcestartlinenumber=\"1\">Logique d'interaction pour OptProfileSelectorDialog.xaml</p>\n"
     },
     {
       "type": "ManagedReference",
@@ -58,7 +74,11 @@
           "relative_path": "api/JeremyAnsel.Xwa.OptTransform.Wpf.OptSkinItem.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform.Wpf.OptSkinItem",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -68,7 +88,11 @@
           "relative_path": "api/JeremyAnsel.Xwa.OptTransform.Wpf.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform.Wpf",
+      "Summary": null
     },
     {
       "type": "ManagedReference",
@@ -78,7 +102,11 @@
           "relative_path": "api/JeremyAnsel.Xwa.OptTransform.html"
         }
       },
-      "version": ""
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform",
+      "Summary": null
     },
     {
       "type": "Conceptual",

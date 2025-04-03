@@ -29,6 +29,15 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetBaseOptFilename
   nameWithType: OptTransformHelpers.GetBaseOptFilename
+- uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(System.Collections.Generic.IList{System.String},System.String)
+  name: GetObjectProfiles(IList<string>, string)
+  href: api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html#JeremyAnsel_Xwa_OptTransform_OptTransformHelpers_GetObjectProfiles_System_Collections_Generic_IList_System_String__System_String_
+  commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(System.Collections.Generic.IList{System.String},System.String)
+  name.vb: GetObjectProfiles(IList(Of String), String)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(System.Collections.Generic.IList<string>, string)
+  fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(System.Collections.Generic.IList(Of String), String)
+  nameWithType: OptTransformHelpers.GetObjectProfiles(IList<string>, string)
+  nameWithType.vb: OptTransformHelpers.GetObjectProfiles(IList(Of String), String)
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetObjectProfiles(System.String)
   name: GetObjectProfiles(string?)
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.html#JeremyAnsel_Xwa_OptTransform_OptTransformHelpers_GetObjectProfiles_System_String_
