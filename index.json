@@ -4,6 +4,11 @@
     "title": "Class OptTransformHelpers",
     "summary": "Class OptTransformHelpers Inheritance object OptTransformHelpers Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: JeremyAnsel.Xwa.OptTransform Assembly: JeremyAnsel.Xwa.OptTransform.dll Syntax public static class OptTransformHelpers Methods | Edit this page View Source GetBaseOptFilename(string?) Declaration public static string GetBaseOptFilename(string? filename) Parameters Type Name Description string filename Returns Type Description string | Edit this page View Source GetObjectProfiles(IList<string>, string) Declaration public static List<int> GetObjectProfiles(IList<string> lines, string profileName) Parameters Type Name Description IList<string> lines string profileName Returns Type Description List<int> | Edit this page View Source GetObjectProfiles(string?) Declaration public static Dictionary<string, List<int>> GetObjectProfiles(string? filename) Parameters Type Name Description string filename Returns Type Description Dictionary<string, List<int>> | Edit this page View Source GetSkins(string?) Declaration public static List<string> GetSkins(string? filename) Parameters Type Name Description string filename Returns Type Description List<string>"
   },
+  "api/JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.html": {
+    "href": "api/JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.html",
+    "title": "Class OptTransformMissionModel",
+    "summary": "Class OptTransformMissionModel Inheritance object OptTransformMissionModel Inherited Members object.Equals(object) object.Equals(object, object) object.GetHashCode() object.GetType() object.MemberwiseClone() object.ReferenceEquals(object, object) object.ToString() Namespace: JeremyAnsel.Xwa.OptTransform Assembly: JeremyAnsel.Xwa.OptTransform.dll Syntax public static class OptTransformMissionModel Methods | Edit this page View Source GetTransformedOpt(string, string?, string?, byte, bool, bool, bool) Declaration public static OptFile GetTransformedOpt(string optFilename, string? missionFileName, string? hangarPath, byte hangarIff, bool groupFaceGroups, bool loadSkins, bool flipPixels = true) Parameters Type Name Description string optFilename string missionFileName string hangarPath byte hangarIff bool groupFaceGroups bool loadSkins bool flipPixels Returns Type Description OptFile"
+  },
   "api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html": {
     "href": "api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html",
     "title": "Class OptTransformModel",
@@ -32,7 +37,7 @@
   "api/JeremyAnsel.Xwa.OptTransform.html": {
     "href": "api/JeremyAnsel.Xwa.OptTransform.html",
     "title": "Namespace JeremyAnsel.Xwa.OptTransform",
-    "summary": "Namespace JeremyAnsel.Xwa.OptTransform Classes OptTransformHelpers OptTransformModel"
+    "summary": "Namespace JeremyAnsel.Xwa.OptTransform Classes OptTransformHelpers OptTransformMissionModel OptTransformModel"
   },
   "api/index.html": {
     "href": "api/index.html",

@@ -26,6 +26,20 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.yml",
       "output": {
         ".html": {

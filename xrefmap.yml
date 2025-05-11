@@ -70,6 +70,28 @@ references:
   isSpec: "True"
   fullName: JeremyAnsel.Xwa.OptTransform.OptTransformHelpers.GetSkins
   nameWithType: OptTransformHelpers.GetSkins
+- uid: JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel
+  name: OptTransformMissionModel
+  href: api/JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.html
+  commentId: T:JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel
+  nameWithType: OptTransformMissionModel
+- uid: JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.GetTransformedOpt(System.String,System.String,System.String,System.Byte,System.Boolean,System.Boolean,System.Boolean)
+  name: GetTransformedOpt(string, string?, string?, byte, bool, bool, bool)
+  href: api/JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.html#JeremyAnsel_Xwa_OptTransform_OptTransformMissionModel_GetTransformedOpt_System_String_System_String_System_String_System_Byte_System_Boolean_System_Boolean_System_Boolean_
+  commentId: M:JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.GetTransformedOpt(System.String,System.String,System.String,System.Byte,System.Boolean,System.Boolean,System.Boolean)
+  name.vb: GetTransformedOpt(String, String, String, Byte, Boolean, Boolean, Boolean)
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.GetTransformedOpt(string, string?, string?, byte, bool, bool, bool)
+  fullName.vb: JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.GetTransformedOpt(String, String, String, Byte, Boolean, Boolean, Boolean)
+  nameWithType: OptTransformMissionModel.GetTransformedOpt(string, string?, string?, byte, bool, bool, bool)
+  nameWithType.vb: OptTransformMissionModel.GetTransformedOpt(String, String, String, Byte, Boolean, Boolean, Boolean)
+- uid: JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.GetTransformedOpt*
+  name: GetTransformedOpt
+  href: api/JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.html#JeremyAnsel_Xwa_OptTransform_OptTransformMissionModel_GetTransformedOpt_
+  commentId: Overload:JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.GetTransformedOpt
+  isSpec: "True"
+  fullName: JeremyAnsel.Xwa.OptTransform.OptTransformMissionModel.GetTransformedOpt
+  nameWithType: OptTransformMissionModel.GetTransformedOpt
 - uid: JeremyAnsel.Xwa.OptTransform.OptTransformModel
   name: OptTransformModel
   href: api/JeremyAnsel.Xwa.OptTransform.OptTransformModel.html
