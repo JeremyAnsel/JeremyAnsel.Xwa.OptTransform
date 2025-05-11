@@ -308,7 +308,7 @@ namespace JeremyAnsel.Xwa.OptTransform
                     return;
                 }
 
-                texture.Value.Convert8To32(false);
+                texture.Value.Convert8To32(false, true);
 
                 string textureName = texture.Key[..position];
                 int fgIndex = int.Parse(texture.Key.Substring(position + 4, texture.Key.IndexOf('_', position + 4) - position - 4), CultureInfo.InvariantCulture);
